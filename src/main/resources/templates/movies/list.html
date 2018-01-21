@@ -2,23 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
-    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
-    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" />
+    <script th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
     <title>Hello Thymeleaf</title>
 </head>
 <body>
-
-<h1>上映中作品</h1>
+<h1>上映中作品一覧</h1>
 <div  class="container">
-<table class="table">
+<table class="table table-striped">
     <tr th:each="movie : ${movies}">
         <td th:text="${movie.title}"></td>
-
         <td>
             <form th:action="@{/movies/buy}" method="get">
                 <input type="submit" name="form" value="購入"/>
-
             </form>
         </td>
 
