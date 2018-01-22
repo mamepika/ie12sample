@@ -12,6 +12,10 @@ public class Movie {
 
     private String title;
 
+    private String director;
+
+    private String runnningTime;
+
 
     public Integer getMovieId() {
         return movieId;
@@ -27,5 +31,21 @@ public class Movie {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public void setDirector(String director) {
+        this.director = director;
+    }
+
+    public String getRunnningTime() {
+        return runnningTime;
+    }
+
+    public void setRunnningTime(String runnningTime) {
+        this.runnningTime = runnningTime;
     }
 }

@@ -13,9 +13,11 @@
 <table class="table table-striped">
     <tr th:each="movie : ${movies}">
         <td th:text="${movie.title}"></td>
+        <td th:text="'監督 :' + ${movie.director} "></td>
+        <td th:text="'上映時間 : ' +${movie.runnningTime}+ '分'"></td>
         <td>
-            <form th:action="@{/movies/buy}" method="get">
-                <input type="submit" name="form" value="購入"/>
+            <form th:action="@{/movies/buy}" method="post">
+                <input type="submit" name="form" class="btn btn-primary" value="購入"/>
             </form>
         </td>
 

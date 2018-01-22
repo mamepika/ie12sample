@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -27,5 +28,11 @@ public class MovieController {
         model.addAttribute("movies",movies);
         return "movies/list";
     }
+
+    @PostMapping("/buy")
+    public String buy(Model model){
+        return "movies/buy";
+    }
+
 
 }
