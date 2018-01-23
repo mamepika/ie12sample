@@ -64,11 +64,6 @@
 			<artifactId>springloaded</artifactId>
 			<version>1.2.8.RELEASE</version>
 		</dependency>
-		<dependency>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-core</artifactId>
-			<version>5.0.6</version>
-		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
