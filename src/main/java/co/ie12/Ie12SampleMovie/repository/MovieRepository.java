@@ -13,4 +13,7 @@ public interface MovieRepository {
 
     @Select
      List<Movie> findAll();
+
+
+    Movie findById();
 }

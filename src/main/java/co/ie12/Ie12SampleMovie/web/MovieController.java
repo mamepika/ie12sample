@@ -15,6 +15,9 @@ import java.util.List;
 @Controller
 @RequestMapping("/movies")
 @ComponentScan("repository")
+/**
+ *
+ */
 public class MovieController {
 
     @Autowired
