@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 /*
  * 映画を参照するサービスクラス
  */
+
 public class MovieService {
 
 }
