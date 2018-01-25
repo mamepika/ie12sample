@@ -8,22 +8,23 @@
     <title>Hello Thymeleaf</title>
 </head>
 <body>
-<h1>上映中作品一覧</h1>
+<h1>映画一覧</h1>
 <div  class="container">
-<table class="table table-striped">
-    <tr th:each="movie : ${movies}">
-        <td th:text="${movie.title}"></td>
-        <td th:text="'監督 :' + ${movie.director} "></td>
-        <td th:text="'上映時間 : ' +${movie.runnningTime}+ '分'"></td>
-        <td>
-            <form th:action="@{/movies/buy}" method="post">
-                <input type="submit" name="form" class="btn btn-primary" value="購入"/>
-            </form>
-        </td>
+    <div class="col-sm-12">
+        <table class="table table-striped">
+            <tr th:each="movie : ${movies}">
+                <td th:text="${movie.title}"></td>
+                <td th:text="'監督 :' + ${movie.director} "></td>
+                <td th:text="'上映時間 : ' +${movie.runnningTime}+ '分'"></td>
+                <td>
+                    <form th:action="@{/movies/buy}" method="post">
+                        <input type="submit" name="form" class="btn btn-primary" value="購入"/>
+                    </form>
+                </td>
+            </tr>
 
-    </tr>
-
-</table>
+        </table>
+    </div>
 </div>
 </body>
 </html>

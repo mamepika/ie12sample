@@ -16,7 +16,7 @@ import java.util.List;
 @RequestMapping("/movies")
 @ComponentScan("repository")
 /**
- *
+ * 映画
  */
 public class MovieController {
 
