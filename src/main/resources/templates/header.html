@@ -8,10 +8,11 @@
     <title>IE12 シネマズ</title>
 </head>
 <body>
-<div th:include="header"></div>
-<h1>チケット購入</h1>
-<div  class="container">
-
+<div th:fragment="header">
+    <nav class="navbar navbar-inverse bg-inverse">
+        <!-- Navbar content -->
+        <a class="navbar-brand" href="#">IE12シネマズ</a>
+    </nav>
 </div>
 </body>
 </html>

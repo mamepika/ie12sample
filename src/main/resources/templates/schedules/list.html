@@ -5,12 +5,41 @@
     <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" />
     <script th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
     <script th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
-    <title>Hello Thymeleaf</title>
+    <title>IE12 シネマズ</title>
 </head>
 <body>
+<div th:include="header"></div>
 <h1>上映中作品一覧</h1>
 <div  class="container">
+    <form method="post" th:attr="action=@{/movies/buy}" th:object="${schedules}">
     <div class="col-sm-12">
+        <table class="table table-striped">
+            <tr th:each="schedule : ${schedules}">
+                <td><img th:src="@{img/futa_1.jpg}"/></td>
+                <td class="h2"  th:text = "${schedule.title}"/>
+                <td th:each="movie : ${schedules}">
+                <td th:text="'上映時間 : ' +${schedule.startTime}+ '～ '+ ${schedule.endTime}"></td>
+                <td>
+                       <input type="submit" name="form" class="btn btn-primary" value="購入"/>
+
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    </form>
+    <div class="col-sm-4">
+        <table class="table table-striped">
+            <tr th:each="schedule : ${schedules}">
+                <td th:each="movie : ${schedules}">
+                <td th:text="'上映時間 : ' +${schedule.startTime}+ '～ '+ ${schedule.endTime}"></td>
+                <td>
+                    <form th:action="@{/movies/buy}" method="post">
+                        <input type="submit" name="form" class="btn btn-primary" value="購入"/>
+                    </form>
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
 </body>

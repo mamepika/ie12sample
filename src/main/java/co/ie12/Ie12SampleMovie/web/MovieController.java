@@ -15,9 +15,6 @@ import java.util.List;
 @Controller
 @RequestMapping("/movies")
 @ComponentScan("repository")
-/**
- * 映画
- */
 public class MovieController {
 
     @Autowired
@@ -34,6 +31,7 @@ public class MovieController {
 
     @PostMapping("/buy")
     public String buy(Model model){
+        System.out.println(model.toString());
         return "movies/buy";
     }
 

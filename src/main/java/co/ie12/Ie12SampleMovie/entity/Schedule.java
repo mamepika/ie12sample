@@ -1,23 +1,18 @@
 package co.ie12.Ie12SampleMovie.entity;
 
 import lombok.Data;
-import org.seasar.doma.Entity;
-import org.seasar.doma.GeneratedValue;
-import org.seasar.doma.GenerationType;
-import org.seasar.doma.Id;
+import org.seasar.doma.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
-@Data
+@Table(name="schedules")
 public class Schedule {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer scheduleId;
-
-    private Integer movieId;
 
     private String title;
 
@@ -31,5 +26,59 @@ public class Schedule {
 
     private Integer theaterId;
 
+    public Integer getScheduleId() {
+        return scheduleId;
+    }
 
+    public void setScheduleId(Integer scheduleId) {
+        this.scheduleId = scheduleId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public void setDirector(String director) {
+        this.director = director;
+    }
+
+    public LocalDate getShowDay() {
+        return showDay;
+    }
+
+    public void setShowDay(LocalDate showDay) {
+        this.showDay = showDay;
+    }
+
+    public LocalTime getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(LocalTime startTime) {
+        this.startTime = startTime;
+    }
+
+    public LocalTime getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(LocalTime endTime) {
+        this.endTime = endTime;
+    }
+
+    public Integer getTheaterId() {
+        return theaterId;
+    }
+
+    public void setTheaterId(Integer theaterId) {
+        this.theaterId = theaterId;
+    }
 }

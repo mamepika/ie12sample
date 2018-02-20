@@ -20,9 +20,9 @@ public class ScheduleController {
 
     @GetMapping
     public String list(Model model){
-        List<Schedule> scheduleList = scheduleRepository.findByShowDay(LocalDate.now());
-
-        model.addAttribute("schedules",scheduleList);
+        List<Schedule> schedule = scheduleRepository.findAll();
+        System.out.println(schedule.get(0).toString());
+        model.addAttribute("schedules",schedule);
         return "schedules/list";
     }
 }
