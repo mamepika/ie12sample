@@ -9,38 +9,80 @@
 </head>
 <body>
 <div th:include="header"></div>
-<h1>上映中作品一覧</h1>
+<h1>上映スケジュール</h1>
 <div  class="container">
-    <form method="post" th:attr="action=@{/movies/buy}" th:object="${schedules}">
+<table>
+    <tr>
+        <td>
+            <form method="post" th:action="@{/schedules}">
+                <input type="submit" name="form" class="btn btn-default" value="2/25"/>
+                <input type="hidden" name="showDay" th:value="${'2018/02/25'}"/>
+            </form>
+        </td>
+        <td>
+            <form method="post" th:action="@{/schedules}">
+                <input type="submit" name="form" class="btn btn-default" value="2/26"/>
+                <input type="hidden" name="showDay" th:value="${'2018/02/26'}"/>
+            </form>
+        </td>
+        <td>
+            <form method="post" th:action="@{/schedules}">
+                <input type="submit" name="form" class="btn btn-default" value="2/27"/>
+                <input type="hidden" name="showDay" th:value="${'2018/02/27'}"/>
+            </form>
+        </td>
+        <td>
+            <form method="post" th:action="@{/schedules}">
+                <input type="submit" name="form" class="btn btn-default" value="2/28"/>
+                <input type="hidden" name="showDay" th:value="${'2018/02/28'}"/>
+            </form>
+        </td>
+        <td>
+            <form method="post" th:action="@{/schedules}">
+                <input type="submit" name="form" class="btn btn-default" value="3/1"/>
+                <input type="hidden" name="showDay" th:value="${'2018/03/01'}"/>
+            </form>
+        </td>
+        <td>
+            <form method="post" th:action="@{/schedules}">
+                <input type="submit" name="form" class="btn btn-default" value="3/2"/>
+                <input type="hidden" name="showDay" th:value="${'2018/03/02'}"/>
+            </form>
+        </td>
+        <td>
+            <form method="post" th:action="@{/schedules}">
+                <input type="submit" name="form" class="btn btn-default" value="3/3"/>
+                <input type="hidden" name="showDay" th:value="${'2018/03/03'}"/>
+            </form>
+        </td>
+    </tr>
+
+</table>
     <div class="col-sm-12">
         <table class="table table-striped">
+            <thead>
+                <th>映画イメージ</th>
+                <th>タイトル</th>
+                <th>上映開始時間</th>
+                <th>上映終了時間</th>
+            </thead>
             <tr th:each="schedule : ${schedules}">
                 <td><img th:src="@{img/futa_1.jpg}"/></td>
                 <td class="h2"  th:text = "${schedule.title}"/>
-                <td th:each="movie : ${schedules}">
-                <td th:text="'上映時間 : ' +${schedule.startTime}+ '～ '+ ${schedule.endTime}"></td>
+                <td class="h3" th:text  ="${schedule.startTime}"/>
+                <td class="h3" th:text  ="${schedule.endTime}"/>
                 <td>
-                       <input type="submit" name="form" class="btn btn-primary" value="購入"/>
-
-                </td>
-            </tr>
-        </table>
-
-    </div>
-    </form>
-    <div class="col-sm-4">
-        <table class="table table-striped">
-            <tr th:each="schedule : ${schedules}">
-                <td th:each="movie : ${schedules}">
-                <td th:text="'上映時間 : ' +${schedule.startTime}+ '～ '+ ${schedule.endTime}"></td>
-                <td>
-                    <form th:action="@{/movies/buy}" method="post">
-                        <input type="submit" name="form" class="btn btn-primary" value="購入"/>
+                    <form method="post" th:action="@{/schedules/buy}">
+                    <input type="submit" name="form" class="btn btn-primary" value="購入"/>
+                    <input type="hidden" name="id" th:value="${schedule.scheduleId}"/>
                     </form>
                 </td>
+
             </tr>
         </table>
+
     </div>
+
 </div>
 </body>
 </html>

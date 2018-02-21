@@ -1,0 +1,41 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet" />
+    <script th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+    <title>IE12 シネマズ</title>
+</head>
+<body>
+<div th:include="header"></div>
+<h1>チケット購入</h1>
+<div  class="container">
+    <div class="col-sm-12">
+        <table class="table">
+            <tr>
+                <td class="h1" colspan="3" th:text="${schedule.title}"></td>
+            </tr>
+            <tr>
+                <td class="h2">上映日</td>
+                <td  class="h2" th:text="${schedule.showDay}"/>
+            </tr>
+            <tr>
+                <td class="h2">上映開始時間</td>
+                <td  class="h2" th:text="${schedule.startTime}"/>
+            </tr>
+            <tr>
+                <td class="h2">上映終了時間</td>
+                <td  class="h2" th:text="${schedule.endTime}"/>
+            </tr>
+            <tr>
+                <td class="h2">料金</td>
+                <td  class="h2" th:text="${schedule.price}"/>
+            </tr>
+
+
+        </table>
+    </div>
+</div>
+</body>
+</html>

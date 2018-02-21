@@ -3,6 +3,7 @@ package co.ie12.Ie12SampleMovie.entity;
 import lombok.Data;
 import org.seasar.doma.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -25,6 +26,14 @@ public class Schedule {
     private LocalTime endTime;
 
     private Integer theaterId;
+
+    private BigDecimal price;
+
+    public boolean isMoviesDay(){
+        return showDay.getDayOfMonth() == 1;
+    }
+
+
 
     public Integer getScheduleId() {
         return scheduleId;
@@ -80,5 +89,13 @@ public class Schedule {
 
     public void setTheaterId(Integer theaterId) {
         this.theaterId = theaterId;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 }

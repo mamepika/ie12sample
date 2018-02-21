@@ -11,6 +11,4 @@ FROM
 WHERE
    sc.movieId = mov.movieid
 AND
-   sc.showDay = /* date */'2018-01-26'
-ORDER BY
-  sc.startTime ;
+   sc.scheduleId = /* id */1

@@ -1,8 +1,22 @@
 package co.ie12.Ie12SampleMovie.service;
 
-/*
-映画料金を計算するサービスクラス
- */
+import co.ie12.Ie12SampleMovie.entity.Schedule;
+
+import java.math.BigDecimal;
+
 public class CalculatePriceService {
 
+    private PriceCalculator priceCalculator;
+
+    /**
+     * コンストラクタ
+     * @param schedule 上映スケジュール
+     */
+    public CalculatePriceService(Schedule schedule){
+        priceCalculator =  PriceCalculatorFactory.create(schedule);
+    }
+
+    public BigDecimal calculatePrice(){
+        return priceCalculator.calculatePrice();
+    }
 }

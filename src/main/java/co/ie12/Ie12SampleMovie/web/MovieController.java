@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -30,8 +31,8 @@ public class MovieController {
     }
 
     @PostMapping("/buy")
-    public String buy(Model model){
-        System.out.println(model.toString());
+    public String buy(@RequestParam Integer id){
+        System.out.println(id.toString());
         return "movies/buy";
     }
 

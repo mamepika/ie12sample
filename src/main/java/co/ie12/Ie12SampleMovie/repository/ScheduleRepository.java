@@ -19,4 +19,7 @@ public interface ScheduleRepository {
 
     @Select
     List<Schedule> findAll();
+
+    @Select
+    Schedule findById(Integer id);
 }
