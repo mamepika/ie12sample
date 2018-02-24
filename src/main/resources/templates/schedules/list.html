@@ -12,53 +12,54 @@
 
 <div  class="container">
     <h1>上映スケジュール</h1>
-<table>
-    <tr>
-        <td>
-            <form method="post" th:action="@{/schedules}">
-                <input type="submit" name="form" class="btn btn-default" value="2/25"/>
-                <input type="hidden" name="showDay" th:value="${'2018/02/25'}"/>
-            </form>
-        </td>
-        <td>
-            <form method="post" th:action="@{/schedules}">
-                <input type="submit" name="form" class="btn btn-default" value="2/26"/>
-                <input type="hidden" name="showDay" th:value="${'2018/02/26'}"/>
-            </form>
-        </td>
-        <td>
-            <form method="post" th:action="@{/schedules}">
-                <input type="submit" name="form" class="btn btn-default" value="2/27"/>
-                <input type="hidden" name="showDay" th:value="${'2018/02/27'}"/>
-            </form>
-        </td>
-        <td>
-            <form method="post" th:action="@{/schedules}">
-                <input type="submit" name="form" class="btn btn-default" value="2/28"/>
-                <input type="hidden" name="showDay" th:value="${'2018/02/28'}"/>
-            </form>
-        </td>
-        <td>
-            <form method="post" th:action="@{/schedules}">
-                <input type="submit" name="form" class="btn btn-default" value="3/1"/>
-                <input type="hidden" name="showDay" th:value="${'2018/03/01'}"/>
-            </form>
-        </td>
-        <td>
-            <form method="post" th:action="@{/schedules}">
-                <input type="submit" name="form" class="btn btn-default" value="3/2"/>
-                <input type="hidden" name="showDay" th:value="${'2018/03/02'}"/>
-            </form>
-        </td>
-        <td>
-            <form method="post" th:action="@{/schedules}">
-                <input type="submit" name="form" class="btn btn-default" value="3/3"/>
-                <input type="hidden" name="showDay" th:value="${'2018/03/03'}"/>
-            </form>
-        </td>
-    </tr>
-
-</table>
+    <div class="col-sm-12">
+    <table>
+        <tr>
+            <td>
+                <form method="post" th:action="@{/schedules}">
+                    <input type="submit" name="form" class="btn btn-default" value="2/25"/>
+                    <input type="hidden" name="showDay" th:value="${'2018/02/25'}"/>
+                </form>
+            </td>
+            <td>
+                <form method="post" th:action="@{/schedules}">
+                    <input type="submit" name="form" class="btn btn-default" value="2/26"/>
+                    <input type="hidden" name="showDay" th:value="${'2018/02/26'}"/>
+                </form>
+            </td>
+            <td>
+                <form method="post" th:action="@{/schedules}">
+                    <input type="submit" name="form" class="btn btn-default" value="2/27"/>
+                    <input type="hidden" name="showDay" th:value="${'2018/02/27'}"/>
+                </form>
+            </td>
+            <td>
+                <form method="post" th:action="@{/schedules}">
+                    <input type="submit" name="form" class="btn btn-default" value="2/28"/>
+                    <input type="hidden" name="showDay" th:value="${'2018/02/28'}"/>
+                </form>
+            </td>
+            <td>
+                <form method="post" th:action="@{/schedules}">
+                    <input type="submit" name="form" class="btn btn-default" value="3/1"/>
+                    <input type="hidden" name="showDay" th:value="${'2018/03/01'}"/>
+                </form>
+            </td>
+            <td>
+                <form method="post" th:action="@{/schedules}">
+                    <input type="submit" name="form" class="btn btn-default" value="3/2"/>
+                    <input type="hidden" name="showDay" th:value="${'2018/03/02'}"/>
+                </form>
+            </td>
+            <td>
+                <form method="post" th:action="@{/schedules}">
+                    <input type="submit" name="form" class="btn btn-default" value="3/3"/>
+                    <input type="hidden" name="showDay" th:value="${'2018/03/03'}"/>
+                </form>
+            </td>
+        </tr>
+    </table>
+    </div>
     <div class="col-sm-12">
         <table class="table table-striped">
             <thead>
