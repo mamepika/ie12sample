@@ -9,12 +9,13 @@
 </head>
 <body>
 <div th:include="header"></div>
-<h1>チケット購入</h1>
+
 <div  class="container">
+    <h1>チケット購入</h1>
     <div class="col-sm-12">
         <table class="table">
             <tr>
-                <td class="h1" colspan="3" th:text="${schedule.title}"></td>
+                <td class="h1" colspan="2" th:text="${schedule.title}"></td>
             </tr>
             <tr>
                 <td class="h2">上映日</td>
@@ -32,7 +33,14 @@
                 <td class="h2">料金</td>
                 <td  class="h2" th:text="${schedule.price}"/>
             </tr>
-
+            <tr>
+                <td></td>
+                <td>
+                    <form method="post" th:action="@{/schedules/confirm}">
+                        <input type="submit" name="form" class="btn btn-primary btn-lg" value="購入"/>
+                    </form>
+                </td>
+            </tr>
 
         </table>
     </div>

@@ -47,4 +47,9 @@ public class ScheduleController {
         model.addAttribute("schedule",schedule);
         return "schedules/buy";
     }
+
+    @PostMapping("/confirm")
+    public String confirm(){
+        return "schedules/confirm";
+    }
 }
