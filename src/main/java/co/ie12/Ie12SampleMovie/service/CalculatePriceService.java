@@ -4,6 +4,9 @@ import co.ie12.Ie12SampleMovie.entity.Schedule;
 
 import java.math.BigDecimal;
 
+/**
+ * 上映料金計算サービスクラス
+ */
 public class CalculatePriceService {
 
     private PriceCalculator priceCalculator;
