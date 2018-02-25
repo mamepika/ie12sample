@@ -30,7 +30,7 @@ public class Schedule {
     private BigDecimal price;
 
     public boolean isMoviesDay(){
-        return showDay.getDayOfMonth() == 1;
+        return (this.showDay != null) ? this.showDay.getDayOfMonth() == 1 : false;
     }
 
 
