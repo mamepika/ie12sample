@@ -31,7 +31,7 @@ public class Schedule {
 
     /**
      * 映画の日かを判定する
-     * @return
+     * @return 映画の日の場合true
      */
     public boolean isMoviesDay(){
         return (this.showDay != null) ? this.showDay.getDayOfMonth() == 1 : false;
