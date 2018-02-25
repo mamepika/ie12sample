@@ -15,7 +15,6 @@ public interface ScheduleRepository {
     @Select
     List<Schedule> findByShowDay(LocalDate date);
 
-
     @Select
     List<Schedule> findAll();
 
