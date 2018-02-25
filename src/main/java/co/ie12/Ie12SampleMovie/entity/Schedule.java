@@ -29,6 +29,10 @@ public class Schedule {
 
     private BigDecimal price;
 
+    /**
+     * 映画の日かを判定する
+     * @return
+     */
     public boolean isMoviesDay(){
         return (this.showDay != null) ? this.showDay.getDayOfMonth() == 1 : false;
     }
