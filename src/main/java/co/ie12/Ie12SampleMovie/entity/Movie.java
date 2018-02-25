@@ -4,6 +4,9 @@ import org.seasar.doma.*;
 
 @Entity
 @Table(name="movies")
+/**
+ * 映画を表すクラス
+ */
 public class Movie {
 
     @Id
