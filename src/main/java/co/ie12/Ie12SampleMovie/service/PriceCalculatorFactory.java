@@ -2,8 +2,7 @@ package co.ie12.Ie12SampleMovie.service;
 
 import co.ie12.Ie12SampleMovie.entity.Schedule;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+
 
 public class PriceCalculatorFactory {
 
