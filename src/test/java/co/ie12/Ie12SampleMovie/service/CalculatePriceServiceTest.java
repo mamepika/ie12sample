@@ -21,10 +21,14 @@ public class CalculatePriceServiceTest {
     }
 
     @Test
-    public void 上映日が1日でない場合上映料金が1800円であること(){
+    public void 上映日が1日でない場合上映料金が1000円であること(){
         Schedule schedule = new Schedule();
         schedule.setShowDay(LocalDate.of(2018,3,2));
         CalculatePriceService priceService = new CalculatePriceService(schedule);
-        assertThat(priceService.calculatePrice(),is(new BigDecimal(1800)));
+        assertThat(priceService.calculatePrice(),is(new BigDecimal(1000)));
     }
+
+
+
+
 }
