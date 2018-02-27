@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 
 import static org.hamcrest.Matchers.is;
@@ -21,14 +22,10 @@ public class CalculatePriceServiceTest {
     }
 
     @Test
-    public void 上映日が1日でない場合上映料金が1000円であること(){
+    public void 上映日が1日でない場合上映料金が1800円であること(){
         Schedule schedule = new Schedule();
         schedule.setShowDay(LocalDate.of(2018,3,2));
         CalculatePriceService priceService = new CalculatePriceService(schedule);
-        assertThat(priceService.calculatePrice(),is(new BigDecimal(1000)));
+        assertThat(priceService.calculatePrice(),is(new BigDecimal(1800)));
     }
-
-
-
-
 }

@@ -8,6 +8,6 @@ import java.math.BigDecimal;
 public class DefaultPriceCalculator implements PriceCalculator {
     @Override
     public BigDecimal calculatePrice() {
-        return new BigDecimal(1000);
+        return new BigDecimal(1800);
     }
 }
