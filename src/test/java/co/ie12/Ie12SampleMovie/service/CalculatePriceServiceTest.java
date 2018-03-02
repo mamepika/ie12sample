@@ -28,27 +28,5 @@ public class CalculatePriceServiceTest {
         CalculatePriceService priceService = new CalculatePriceService(schedule);
         assertThat(priceService.calculatePrice(),is(new BigDecimal(1800)));
     }
-    @Test
-    public void 上映開始が21時以降の場合上映料金が1000円であること(){
-        Schedule schedule = new Schedule();
-        schedule.setStartTime(LocalTime.of(21,05));
-        CalculatePriceService priceService = new CalculatePriceService(schedule);
-        assertThat(priceService.calculatePrice(),is(new BigDecimal(1000)));
-    }
 
-    @Test
-    public void 上映日が1日で上映開始が21時以降の場合上映料金が1000円であること(){
-        Schedule schedule = new Schedule();
-        schedule.setStartTime(LocalTime.of(21,05));
-        CalculatePriceService priceService = new CalculatePriceService(schedule);
-        assertThat(priceService.calculatePrice(),is(new BigDecimal(1000)));
-    }
-
-    @Test
-    public void 上映終了が21時以降の場合上映料金が1800であること(){
-        Schedule schedule = new Schedule();
-        schedule.setEndTime(LocalTime.of(21,05));
-        CalculatePriceService priceService = new CalculatePriceService(schedule);
-        assertThat(priceService.calculatePrice(),is(new BigDecimal(1800)));
-    }
 }
