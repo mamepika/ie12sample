@@ -38,6 +38,7 @@ public class Schedule {
         return (this.showDay != null) && this.showDay.getDayOfMonth() == 1;
     }
 
+
     public Integer getScheduleId() {
         return scheduleId;
     }

@@ -28,4 +28,6 @@ public class CalculatePriceServiceTest {
         CalculatePriceService priceService = new CalculatePriceService(schedule);
         assertThat(priceService.calculatePrice(),is(new BigDecimal(1800)));
     }
+
+
 }

@@ -8,6 +8,7 @@ import co.ie12.Ie12SampleMovie.entity.Schedule;
 public class PriceCalculatorFactory {
 
     public static PriceCalculator create(Schedule schedule){
+
         if(schedule.isMoviesDay()){
             return  new MoviesDayPriceCalculator();
         }
