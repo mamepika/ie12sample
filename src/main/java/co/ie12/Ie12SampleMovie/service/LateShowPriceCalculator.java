@@ -9,6 +9,6 @@ public class LateShowPriceCalculator implements  PriceCalculator{
 
     @Override
     public BigDecimal calculatePrice() {
-        return null;
+        return new BigDecimal(1000);
     }
 }

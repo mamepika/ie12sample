@@ -38,6 +38,9 @@ public class Schedule {
         return (this.showDay != null) && this.showDay.getDayOfMonth() == 1;
     }
 
+    public boolean isLateShow(){
+        return (this.startTime != null) ? this.startTime.isAfter(LocalTime.of(21,00 )) : false;
+    }
 
     public Integer getScheduleId() {
         return scheduleId;
